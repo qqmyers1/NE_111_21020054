@@ -5,13 +5,6 @@ Created on Thu Nov 24 12:53:12 2022
 """
 
 # notation: single # is for certain, double # is for uncertain
-"""Snake, classic arcade game.
-Exercises
-1. How do you make the snake faster or slower?
-2. How can you make the snake go around the edges?
-3. How would you move the food?
-4. Change the snake to respond to mouse clicks.
-"""
 
 from random import randrange
 #This line imports a random element from a range that we can specify
