@@ -106,10 +106,10 @@ def move():
     for body in snake:
         square(body.x, body.y, 9, 'purple')
 #codes to make the body of the snake black, as well as the size of the cube-QM
-    square(food.x, food.y, 9, 'green')
+    square(food.x, food.y, 9, 'blue')
 #this makes the food green, as well as setting its dimensions-QM
     for i in range(len(walls)):
-        square(walls[i].x, walls[i].y, 9, 'black')
+        square(walls[i].x, walls[i].y, 9, 'red')
 #makes the walls. made them black and the same dimensions as the food and snake-AK
 
         if food.x == walls[i].x and food.y == walls[i].y:
@@ -129,6 +129,9 @@ tracer(False)
 #this makes the items just appear quickly instead of being traced in one line at a time-QM
 listen()
 ##seems to literally be the thing that makes the system "listen" to the player's commands-QM
+
+bgcolor('black')
+#changes the background to black
 
 onkey(lambda: change(10, 0), 'Right')
 onkey(lambda: change(-10, 0), 'Left')
