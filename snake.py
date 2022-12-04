@@ -96,7 +96,7 @@ def move():
         tempwallx = randrange(-15, 15) * 10
         tempwally = randrange(-15, 15) * 10 
         walls.append(vector(tempwallx,tempwally))
-#giving the wall a random vector, and appending it to the list mentioned previously above- TK
+#giving the wall a random vector, and appending it to the list mentioned previously above- AK
             
     else:
         snake.pop(0)
@@ -105,17 +105,17 @@ def move():
 #this makes the snake update to keep a consistent length-QM
     for body in snake:
         square(body.x, body.y, 9, 'purple')
-#codes to make the body of the snake black, as well as the size of the cube-QM
-    square(food.x, food.y, 9, 'blue')
-#this makes the food green, as well as setting its dimensions-QM
+#codes to make the body of the snake purple, as well as the size of the cube-QM
+    square(food.x, food.y, 9, 'green')
+#this makes the food blue, as well as setting its dimensions-QM
     for i in range(len(walls)):
-        square(walls[i].x, walls[i].y, 9, 'red')
+        square(walls[i].x, walls[i].y, 9, 'black')
 #makes the walls. made them black and the same dimensions as the food and snake-AK
 
         if food.x == walls[i].x and food.y == walls[i].y:
             food.x = randrange(-15, 15) * 10
             food.y = randrange(-15, 15) * 10
-    #ensures that the generated food and walls do not end up on the same vector-AK
+#ensures that the generated food and walls do not end up on the same vector-AK
      
     update()
     ontimer(move, 100)
@@ -130,8 +130,6 @@ tracer(False)
 listen()
 ##seems to literally be the thing that makes the system "listen" to the player's commands-QM
 
-bgcolor('black')
-#changes the background to black
 
 onkey(lambda: change(10, 0), 'Right')
 onkey(lambda: change(-10, 0), 'Left')
